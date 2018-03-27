@@ -1,1 +1,1 @@
-<div class="logo">Moeder's mooiste</div>
+Moeder's mooiste

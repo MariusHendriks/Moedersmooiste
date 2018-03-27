@@ -31,12 +31,22 @@ nav li a {
 nav li a:hover {
     background-color: #111;
 }
+
+.container{
+   width: 80%;
+   margin-left: 10%;
+}
 /* HEADER FINISH */
 /* HOME START */
 .home{
     height: 100vh;
+    line-height: 100vh;
     width: 100vw;
-    background-color: blue;
+    background-image: url(../img/1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
 }
 /* HOME FINISH */
 
@@ -44,7 +54,7 @@ nav li a:hover {
 .biografie{
     height: 100vh;
     width: 100vw;
-    background-color: purple;
+    background-color: #f7f7f7;
 }
 /* BIOGRAFIE FINISH */
 
