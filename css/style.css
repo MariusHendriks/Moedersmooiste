@@ -5,8 +5,9 @@
 }
 /* HEADER START */
 nav{
+  position: fixed;
     width: 100vw;
-    background-color: #353531;
+    background-color: rgba(193, 193, 193, 0.82);
     height: 5vh;
     line-height: 5vh;
 }
@@ -24,19 +25,20 @@ nav li {
 nav li a {
     text-align: center;
     text-decoration: none;
-    color: #F7F7F7;
+    color: #353531;
     padding: 0px 30px;
 }
 
 nav li a:hover {
-    background-color: #111;
+
 }
 /* HEADER FINISH */
 /* HOME START */
 .home{
     height: 100vh;
     width: 100vw;
-    background-color: blue;
+    background-image : url("../resources/moedersmooiste.jpg");
+    background-size: cover;
 }
 /* HOME FINISH */
 
