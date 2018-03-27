@@ -1,4 +1,89 @@
 *{
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
+/* HEADER START */
+nav{
+    width: 100vw;
+    background-color: #353531;
+    height: 5vh;
+    line-height: 5vh;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+nav li {
+
+}
+
+nav li a {
+    text-align: center;
+    text-decoration: none;
+    color: #F7F7F7;
+    padding: 0px 30px;
+}
+
+nav li a:hover {
+    background-color: #111;
+}
+/* HEADER FINISH */
+/* HOME START */
+.home{
+    height: 100vh;
+    width: 100vw;
+    background-color: blue;
+}
+/* HOME FINISH */
+
+/* BIOGRAFIE START */
+.biografie{
+    height: 100vh;
+    width: 100vw;
+    background-color: purple;
+}
+/* BIOGRAFIE FINISH */
+
+/* SHOWS START */
+.shows{
+    height: 100vh;
+    width: 100vw;
+    background-color: yellow;
+}
+/* SHOWS FINISH */
+
+/* VIDEOS START */
+.videos{
+    height: 100vh;
+    width: 100vw;
+    background-color: pink;
+}
+/* VIDEOS FINISH */
+
+/* MUZIEK START */
+.muziek{
+    height: 100vh;
+    width: 100vw;
+    background-color: green;
+}
+/* MUZIEK FINISH */
+
+/* FOTOS START */
+.fotos{
+    height: 100vh;
+    width: 100vw;
+    background-color: powderblue;
+}
+/* FOTOS FINISH */
+
+/* CONTACT START */
+.contact{
+    height: 100vh;
+    width: 100vw;
+    background-color: sienna;
+}
+/* CONTACT FINISH */
