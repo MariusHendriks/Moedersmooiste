@@ -1,53 +1,123 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    font-family: sans-serif;
 }
+
+body {
+    overflow-x: hidden;
+    background-color: #F7F7F7;
+}
+
 /* HEADER START */
-nav{
-  position: fixed;
+nav {
+    position: fixed;
     width: 100vw;
     background-color: rgba(193, 193, 193, 0.82);
-    height: 5vh;
-    line-height: 5vh;
+    height: 7.5vh;
+    line-height: 7.5vh;
+    box-shadow: 0 0 1vh;
 }
+
 nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    list-style: none;
+}
 
+#header_logo {
+    align-self: center;
+    width: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* SVG LOGO START */
+
+#SVGLOGO {
+    height: 5.5vh;
+    padding: 1vh 1vw;
+    cursor: pointer;
+}
+
+/* SVG LOGO FINISH */
+
+nav ul div:first-child {
+    height: 7.5vh;
+    width: 45vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav ul div:last-child {
+    height: 7.5vh;
+    width: 45vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 nav li {
-
-}
-
-nav li a {
     text-align: center;
     text-decoration: none;
     color: #353531;
-    padding: 0px 30px;
+    margin: 0 0.75vw;
+    position: relative;
+    font-weight: 800;
 }
 
-nav li a:hover {
-
+nav li::after {
+    border-bottom: 0.2em solid #353531;
+    content: "";
+    left: 0;
+    margin-top: calc(0.2em / 2 * -1);
+    position: absolute;
+    right: 0;
+    top: 68%;
+    transition: 0.25s;
 }
 
-.container{
+nav li:hover {
+    cursor: pointer;
+}
+
+nav li:hover::after {
+    border-bottom: 0.2em solid #353531;
+    content: "";
+    left: 0;
+    margin-top: calc(0.2em / 2 * -1);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transition: 0.25s;
+}
+/* HEADER FINISH */
+
+/* HOME START */
+.container {
    width: 80%;
    margin-left: 10%;
 }
-/* HEADER FINISH */
-/* HOME START */
+
 .home{
     height: 100vh;
     line-height: 100vh;
     width: 100vw;
-    background-image: url(../img/1.png);
+    background-image: url(../resources/splash.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     justify-content: center;
+}
+
+#splashH1 {
+    margin: 2.5vh 0 0 0;
+    font-size: 5em;
+    color: #F7F7F7;
+    font-family: fantasy;
 }
 /* HOME FINISH */
 
