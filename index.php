@@ -2,6 +2,8 @@
     <head>
         <title>Moeders Mooiste</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body>
@@ -46,8 +48,8 @@
             <section class="contact">
                 <?php include_once('modules/contact.php'); ?>
             </section>
-            
-            <script src="scripts/script.js"></script>
         </main>
+        <script src="scripts/owl.carousel.min.js"></script>
+        <script src="scripts/script.js"></script>
     </body>
 </html>
