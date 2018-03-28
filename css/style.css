@@ -1,3 +1,11 @@
+/* sea blue: #006E90
+Tangeringe: #f18f01
+Jelly bean: #DB504A
+White smoke: #f7f7f7
+Jet: #353531
+ */
+
+
 * {
     margin: 0;
     padding: 0;
@@ -166,5 +174,44 @@ nav li:hover::after {
     height: 100vh;
     width: 100vw;
     background-color: sienna;
+    color: white;
+}
+
+.contact h1 {
+  margin: 0 auto;
+}
+
+.contact .contact-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.contact .contact-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.contact form {
+  height: 30%;
+  width: 50vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+
+
+}
+.contact form label {
+  
+}
+.contact form fieldset {
+   border: none;
+   display: flex;
+   flex-direction: column;
+}
+
+.contact .submit {
+  width: 200px;
+  height: 50px;
 }
 /* CONTACT FINISH */
