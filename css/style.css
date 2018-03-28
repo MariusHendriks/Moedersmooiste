@@ -153,6 +153,10 @@ nav li:hover::after {
     width: 100vw;
     background-color: #f7f7f7;
 }
+.imageCarousel{
+  width: 100%;
+  background-color: blue;
+}
 /* VIDEOS FINISH */
 
 /* MUZIEK START */
