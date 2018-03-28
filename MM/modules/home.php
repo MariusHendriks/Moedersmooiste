@@ -1,1 +1,0 @@
-<h1 id="splashH1">Moeders Mooiste</h1>
