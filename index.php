@@ -54,7 +54,6 @@
             <section class="contact">
                 <?php include_once('modules/contact.php'); ?>
             </section>
-            
         </main>
         <script src="scripts/script.js"></script>
     </body>

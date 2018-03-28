@@ -17,7 +17,6 @@ $(document).ready(function() {
         var offset = $("nav").height();
         $("html, body").animate({scrollTop: $("."+navArray[1]).offset().top - offset}, 750);
     });
-    
     $(".socialicons").on({
         mouseenter: function(){
             switch (this.id) {
