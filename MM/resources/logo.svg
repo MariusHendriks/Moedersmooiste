@@ -1,0 +1,51 @@
+<svg id="SVGLOGO" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 598.36 637.2">
+    <defs>
+        <style>
+            .cls-1 {
+                fill:none;
+            }
+            
+            .cls-1,
+            .cls-2,
+            .cls-3 {
+                stroke:#353535;
+                stroke-miterlimit:10;
+            }
+            
+            .cls-1,
+            .cls-2 {
+                stroke-width:21px;
+            }
+            
+            .cls-2,
+            .cls-3 {
+                fill:#353535;
+            }
+            
+            .cls-3 {
+                stroke-width: 18.5px;
+            }
+        </style>
+    </defs>
+    <path class="cls-1" d="M45.13,634.71l572.64-42.9Q565.31,406.11,512.88,220.4L480.06,104.21,45.13,130.54Z" transform="translate(-33.01 -8.83)"/>
+    <path class="cls-1" d="M429.65,384.88" transform="translate(-33.01 -8.83)"/>
+    <path class="cls-1" d="M499.63,257" transform="translate(-33.01 -8.83)"/>
+    <path class="cls-1" d="M67,308.13" transform="translate(-33.01 -8.83)"/>
+    <path class="cls-1" d="M490.6,250.94" transform="translate(-33.01 -8.83)"/>
+    <path class="cls-1" d="M577.89,571.5" transform="translate(-33.01 -8.83)"/>
+    <path class="cls-1" d="M579.39,561.72" transform="translate(-33.01 -8.83)"/>
+    <path class="cls-1" d="M60.18,601.6" transform="translate(-33.01 -8.83)"/>
+    <path class="cls-1" d="M579.39,567,76.73,602.35Q73.36,451.48,70,300.6L499.63,257Q539.52,412,579.39,567Z" transform="translate(-33.01 -8.83)"/>
+    <path class="cls-1" d="M185,296c3.45,39.13-16.77,72.88-45.15,75.37S85.63,344.2,82.19,305.07" transform="translate(-33.01 -8.83)"/>
+    <path class="cls-1" d="M293.44,278.89c6.89,38.67-10.27,74.07-38.32,79.06-27,4.82-57.41-28.13-63.26-61" transform="translate(-33.01 -8.83)"/>
+    <path class="cls-1" d="M395,271.36c3.66,40-16.37,70.31-34.68,72.79-19.54,2.64-50.09-24.68-52.68-70.32" transform="translate(-33.01 -8.83)"/>
+    <path class="cls-1" d="M399.64,268c10.18,44.34,44.66,65.59,63.45,59.44,16.64-5.45,29.47-35.21,22.7-70.12" transform="translate(-33.01 -8.83)"/>
+    <path class="cls-1" d="M206.65,598.59c8.75-47.64-26.58-87.66-62.11-88.82s-73.25,36.3-67.81,84.3" transform="translate(-33.01 -8.83)"/>
+    <path class="cls-1" d="M334.2,590.82c2.16-57.45-37.74-95.45-66.12-93.5-27.39,1.89-60.2,42.16-54.09,96.17" transform="translate(-33.01 -8.83)"/>
+    <path class="cls-1" d="M451.06,580c1.35-54.76-32.59-91.85-57.43-91.49-25.27.38-59,39.82-54.09,96.17" transform="translate(-33.01 -8.83)"/>
+    <path class="cls-1" d="M572.59,565.26C564.93,506.36,523,473.4,498,478.37c-24.08,4.79-48.76,48-38.14,102.21" transform="translate(-33.01 -8.83)"/>
+    <ellipse class="cls-2" cx="114.83" cy="181.92" rx="25.96" ry="36.87"/>
+    <ellipse class="cls-3" cx="350.95" cy="171.57" rx="31.81" ry="20.88"/>
+    <path class="cls-1" d="M85.27,41.71a69.82,69.82,0,0,0-32.5,28.5c-14.05,24-8.28,48.11-7,53l83-7a94,94,0,0,1-43.5-74.5Z" transform="translate(-33.01 -8.83)"/>
+    <path class="cls-1" d="M432.31,23.74A69.82,69.82,0,0,1,466.63,50c15.6,23,11.44,47.46,10.49,52.42L393.84,101a94,94,0,0,0,38.47-77.21Z" transform="translate(-33.01 -8.83)"/>
+</svg>
