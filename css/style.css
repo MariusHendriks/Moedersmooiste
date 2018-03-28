@@ -1,7 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
 }
 
 body {
@@ -9,14 +10,36 @@ body {
     background-color: #F7F7F7;
 }
 
+h1 {
+    font-family: 'Prompt', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Prompt', sans-serif;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
 /* HEADER START */
-nav {
+header {
     position: fixed;
     width: 100vw;
-    background-color: rgba(193, 193, 193, 0.82);
+    background-color: rgba(247, 247, 247, 0.82);
     height: 7.5vh;
     line-height: 7.5vh;
     box-shadow: 0 0 1vh;
+    z-index: 2147483646;
 }
 
 nav ul {
@@ -26,7 +49,50 @@ nav ul {
     list-style: none;
 }
 
-#header_logo {
+/* SVG LOGO START */
+#SVGLOGO {
+    height: 5.5vh;
+    padding: 1vh 1vw;
+    cursor: pointer;
+}
+
+.SVGLOGO_line {
+    fill: none;
+    stroke: #353531;
+    stroke-miterlimit: 10;
+    stroke-width: 21px;
+}
+
+#SVGLOGO_ellipseLeft {
+    stroke: #353531;
+    stroke-miterlimit: 10;
+    stroke-width: 21px;
+    fill: #353531;
+}
+
+#SVGLOGO_ellipseRight {
+    stroke: #353531;
+    stroke-miterlimit: 10;
+    stroke-width: 18.5px;
+    fill: #353531;
+}
+/* SVG LOGO FINISH */
+
+nav ul div:nth-child(1) {
+    height: 7.5vh;
+    width: 15vw;
+    padding-left: 2.5vw;
+}
+
+nav ul div:nth-child(2) {
+    height: 7.5vh;
+    width: 27.5vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav ul div:nth-child(3) {
     align-self: center;
     width: 10vw;
     display: flex;
@@ -34,30 +100,26 @@ nav ul {
     align-items: center;
 }
 
-/* SVG LOGO START */
-
-#SVGLOGO {
-    height: 5.5vh;
-    padding: 1vh 1vw;
-    cursor: pointer;
+nav ul div:nth-child(4) {
+    height: 7.5vh;
+    width: 27.5vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-/* SVG LOGO FINISH */
-
-nav ul div:first-child {
+nav ul div:nth-child(5) {
     height: 7.5vh;
-    width: 45vw;
+    width: 15vw;
+    padding-right: 2.5vw;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-nav ul div:last-child {
-    height: 7.5vh;
-    width: 45vw;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+nav ul div:nth-child(5) svg {
+    margin: 0 0.3vw;
+    cursor: pointer;
 }
 
 nav li {
@@ -66,14 +128,17 @@ nav li {
     color: #353531;
     margin: 0 0.75vw;
     position: relative;
-    font-weight: 800;
+    font-family: 'Prompt', sans-serif;
+    font-weight: 900;
+    font-size: 1.1em;
+    text-transform: uppercase;
 }
 
 nav li::after {
-    border-bottom: 0.2em solid #353531;
+    border-bottom: 0.5vh solid #353531;
     content: "";
     left: 0;
-    margin-top: calc(0.2em / 2 * -1);
+    margin-top: calc(0.5vh / 2 * -1);
     position: absolute;
     right: 0;
     top: 68%;
@@ -85,39 +150,35 @@ nav li:hover {
 }
 
 nav li:hover::after {
-    border-bottom: 0.2em solid #353531;
+    border-bottom: 0.5vh solid #353531;
     content: "";
     left: 0;
-    margin-top: calc(0.2em / 2 * -1);
+    margin-top: calc(0.5vh / 2 * -1);
     position: absolute;
     right: 0;
-    top: 32%;
+    top: calc(32% - 0.25vh);
     transition: 0.25s;
 }
 /* HEADER FINISH */
 
 /* HOME START */
-.container {
-   width: 80%;
-   margin-left: 10%;
-}
-
-.home{
+.home {
     height: 100vh;
-    line-height: 100vh;
     width: 100vw;
     background-image: url(../resources/splash.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 #splashH1 {
-    margin: 2.5vh 0 0 0;
-    font-size: 5em;
     color: #F7F7F7;
-    font-family: fantasy;
+    font-family: 'Prompt', sans-serif;
+    font-weight: 900;
+    font-size: 7.5em;
+    text-transform: uppercase;
 }
 /* HOME FINISH */
 
