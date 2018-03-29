@@ -1,8 +1,10 @@
 # Moeders Mooiste Website
 
-Hier staat de broncode van de website van Moeders Mooiste. Van alle Hypertext Preprocessor, Cascading Style Sheets en JavaScript bestanden tot aan foto's en video's op de webpagina.
+De gemaakte website voor Moeders Mooiste is hier te vinden. De gehele brondcode staat hier met alle Hypertext Preprocessor, Cascading Style Sheets, JavaScript en foto's van de webpagina.
 
-## Auteurs
+Dit project is gemaakt door enkele studenten van de [Fontys Hogeschool ICT](https://fontys.nl/hbo-ict/) in opdracht van de band [Moeders Mooiste](http://moedersmooisteband.nl/) van de [Fontys Rockacademie](https://fontys.nl/rockacademie/) in Tilburg.
+
+## Makers
 
 * **Max Altena** - [GitHub](https://github.com/MaxAltena)
 * **Dylano Hartman** - [GitHub](https://github.com/DylanoH)
