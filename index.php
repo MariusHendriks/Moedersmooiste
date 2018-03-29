@@ -1,14 +1,6 @@
 <html lang="nl">
     <head>
-<<<<<<< HEAD
-        <title>Moeders Mooiste</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel="stylesheet" href="css/owl.carousel.min.css">
-        <link rel="stylesheet" href="css/owl.theme.default.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-=======
         <?php include_once('includes/header.php'); ?>
->>>>>>> 5996b6569d351da06484a4dbfd7d5275b64b9022
     </head>
     <body>
         <?php include_once('includes/loader.php'); ?>
@@ -38,7 +30,7 @@
                     </div>
                 </ul>
             </nav>
-            
+
         </header>
         <main>
             <section class="home">
