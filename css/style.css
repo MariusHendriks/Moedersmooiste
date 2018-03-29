@@ -1,10 +1,10 @@
 /* LIFE HACKS
 
-bLue:
-red:
-orange:
-white:
-black:
+bLue: #006E90
+red: #DB504A
+orange: #F18F01
+white:   #F7F7F7
+black: #353531
 
 */
 
@@ -153,9 +153,14 @@ nav li:hover::after {
     width: 100vw;
     background-color: #f7f7f7;
 }
-.imageCarousel{
+.item-video{
   width: 100%;
-  background-color: blue;
+}
+.owl-carousel .item-video .owl-item{
+  color: white;
+}
+.carouselVideo{
+  width: 100%;
 }
 /* VIDEOS FINISH */
 
