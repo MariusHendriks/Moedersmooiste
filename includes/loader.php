@@ -57,11 +57,14 @@
     
     <script>
         $(document).ready(function() {
-            $(window).on("load", function() {
-                $("#loader-wrapper").fadeOut(500);
-                $("body").delay(500).addClass("loaded");
-                $("#loader-all").delay(500).remove();
-            });
+            setTimeout(function() {
+                $("body").addClass("loaded");
+            }, onload + 500);
+
+            setTimeout(function() {
+                $("#loader-wrapper").hide();
+                $("#loader-all").remove();
+            }, onload + 1050);
         });
     </script>
 </div>

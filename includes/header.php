@@ -1,5 +1,4 @@
 <title>Moeders Mooiste</title>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="UTF-8">
 <meta name="description" content="Verleidelijke jongens, verknipte verhalen – Nederpop over de kop. De frisse doch stevige sound van deze band nestelt zich in je hoofd en kruipt in je hart.">
 <meta name="keywords" content="Moeders, Mooiste, Moeders Mooiste, Band">
