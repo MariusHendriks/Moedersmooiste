@@ -1,10 +1,12 @@
-/* sea blue: #006E90
-Tangeringe: #f18f01
-Jelly bean: #DB504A
-White smoke: #f7f7f7
-Jet: #353531
- */
+/* 
 
+Sea blue: #3FBCED
+Tangeringe: #F18F01
+Jelly bean: #DB504A
+White smoke: #F7F7F7
+Jet: #353531
+
+*/
 
 * {
     margin: 0;
@@ -22,6 +24,8 @@ h1 {
     font-family: 'Prompt', sans-serif;
     font-weight: 900;
     text-transform: uppercase;
+    color: #353531;
+    font-size: 3em;
 }
 
 h2,
@@ -32,11 +36,29 @@ h6 {
     font-family: 'Prompt', sans-serif;
     font-weight: 700;
     text-transform: capitalize;
+    color: #353531;
 }
 
 p {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
+    color: #353531;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F7F7F7; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #353531; 
+}
+
+::-webkit-scrollbar-corner {
+    background: #F7F7F7;
 }
 
 /* HEADER START */
@@ -169,10 +191,47 @@ nav li:hover::after {
 }
 /* HEADER FINISH */
 
+/* Universal section styling */
+section {
+    height: auto;
+    min-height: 25vh;
+    width: 80vw;
+    background: #F7F7F7;
+    padding: 5vh 10vw;
+}
+
+.sectionHeader {
+    display: flex;
+    justify-content: center;
+}
+
+.sectionHeader h1 {
+    text-align: center;
+    position: relative;
+    width: auto;
+}
+
+.sectionHeader h1::after { 
+    border-bottom: 0.2em solid #353531;
+    content: "";
+    left: 0;
+    margin-top: calc(0.2em / 2 * -1);
+    position: absolute;
+    right: 0;
+    top: 82.5%;
+}
+
+.sectionContent {
+    padding: 4vh 5vw;
+}
+/* End of Universal section styling */
+
 /* HOME START */
 .home {
     height: 100vh;
     width: 100vw;
+    padding: 0;
+    margin: 0;
     background-image: url(../resources/splash.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -187,69 +246,11 @@ nav li:hover::after {
     font-weight: 900;
     font-size: 7.5em;
     text-transform: uppercase;
+    margin-top: 60vh;
 }
 /* HOME FINISH */
 
-/* BIOGRAFIE START */
-.biografie{
-    height: 100vh;
-    width: 100vw;
-    background-color: #f7f7f7;
-}
-/* BIOGRAFIE FINISH */
-
-/* SHOWS START */
-.shows{
-    height: 100vh;
-    width: 100vw;
-    background-color: yellow;
-}
-/* SHOWS FINISH */
-
-/* VIDEOS START */
-.videos{
-    width: 100vw;
-    background-color: #f7f7f7;
-}
-.item-video{
-  width: 100%;
-}
-.owl-carousel .item-video .owl-item{
-  color: white;
-}
-.carouselVideo{
-  width: 100%;
-}
-/* VIDEOS FINISH */
-
-/* MUZIEK START */
-.muziek{
-    height: 100vh;
-    width: 100vw;
-    background-color: green;
-}
-/* MUZIEK FINISH */
-
-/* FOTOS START */
-.fotos{
-    height: 100vh;
-    width: 100vw;
-    background-color: powderblue;
-}
-/* FOTOS FINISH */
-
 /* CONTACT START */
-.contact{
-    height: 100vh;
-    width: 100vw;
-    background-color: sienna;
-    color: white;
-}
-
-.contact h1 {
-  margin: 0 auto;
-}
-
 .contact .contact-left {
   display: flex;
   flex-direction: column;
@@ -267,11 +268,9 @@ nav li:hover::after {
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
-
-
 }
 .contact form label {
-
+  
 }
 .contact form fieldset {
    border: none;
@@ -279,8 +278,63 @@ nav li:hover::after {
    flex-direction: column;
 }
 
+
 .contact .submit {
   width: 200px;
   height: 50px;
+
+/* VIDEOS START */
+.videos{
+    width: 100vw;
+    background-color: #f7f7f7;
+}
+.item-video{
+  width: 100%;
+}
+.owl-carousel .item-video .owl-item{
+  color: white;
+}
+.carouselVideo{
+  width: 100%;
 }
 /* CONTACT FINISH */
+  
+.shows {
+    background: #3FBCED;
+}
+
+.shows h1,
+.shows p {
+    color: #F7F7F7;
+}
+
+
+.shows h1::after {
+    border-bottom: 0.2em solid #F7F7F7;
+}
+
+.muziek {
+    background: #F18F01;
+}
+
+.muziek h1,
+.muziek p {
+    color: #F7F7F7;
+}
+
+.muziek h1::after {
+    border-bottom: 0.2em solid #F7F7F7;
+}
+
+.contact {
+    background: #DB504A;
+}
+
+.contact h1,
+.contact p {
+    color: #F7F7F7;
+}
+
+.contact h1::after {
+    border-bottom: 0.2em solid #F7F7F7;
+}
