@@ -1,6 +1,6 @@
 # Moeders Mooiste Website
 
-Hier staat de source van de website van Moeders Mooiste. Van alle PHP, CSS en JavaScript files tot aan foto's en video's op de webpagina.
+Hier staat de broncode van de website van Moeders Mooiste. Van alle Hypertext Preprocessor, Cascading Style Sheets en JavaScript bestanden tot aan foto's en video's op de webpagina.
 
 ## Auteurs
 
