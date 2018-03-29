@@ -30,7 +30,7 @@
                     </div>
                 </ul>
             </nav>
-            
+
         </header>
         <main>
             <section class="home">
@@ -55,6 +55,10 @@
                 <?php include_once('modules/contact.php'); ?>
             </section>
         </main>
+<<<<<<< HEAD
+        <script src="scripts/owl.carousel.min.js"></script>
+=======
+>>>>>>> 5996b6569d351da06484a4dbfd7d5275b64b9022
         <script src="scripts/script.js"></script>
     </body>
 </html>

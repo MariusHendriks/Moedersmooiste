@@ -278,12 +278,27 @@ section {
    flex-direction: column;
 }
 
+
 .contact .submit {
   width: 200px;
   height: 50px;
+
+/* VIDEOS START */
+.videos{
+    width: 100vw;
+    background-color: #f7f7f7;
+}
+.item-video{
+  width: 100%;
+}
+.owl-carousel .item-video .owl-item{
+  color: white;
+}
+.carouselVideo{
+  width: 100%;
 }
 /* CONTACT FINISH */
-
+  
 .shows {
     background: #3FBCED;
 }
@@ -292,6 +307,7 @@ section {
 .shows p {
     color: #F7F7F7;
 }
+
 
 .shows h1::after {
     border-bottom: 0.2em solid #F7F7F7;
