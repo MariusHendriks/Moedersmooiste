@@ -224,6 +224,12 @@ section {
 .sectionContent {
     padding: 4vh 5vw;
 }
+
+.sectionContent p {
+    font-size: 1.25em;
+    line-height: 1.6em;
+    padding: 1vh 0;
+}
 /* End of Universal section styling */
 
 /* HOME START */
@@ -250,12 +256,54 @@ section {
 }
 /* HOME FINISH */
 
+/* BIOGRAFIE START */
+
+.biografieFotos {
+    width: 80vw;
+    height: 40vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.biografieFoto {
+    width: 17.5vw;
+    height: 17.5vw;
+    border-radius: 50%;
+}
+
+.portretKoen {
+    background-image: url(../resources/band/portret_Koen.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.portretBram {
+    background-image: url(../resources/band/portret_Bram.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.portretGeert {
+    background-image: url(../resources/band/portret_Geert.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.portretLuuk {
+    background-image: url(../resources/band/portret_Luuk.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* BIOGRAFIE FINISH */
+
 /* CONTACT START */
 .contact .contact-left {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
+
 .contact .contact-right {
   display: flex;
   flex-direction: column;
@@ -269,36 +317,19 @@ section {
   display: flex;
   justify-content: space-around;
 }
-.contact form label {
-  
-}
+
 .contact form fieldset {
    border: none;
    display: flex;
    flex-direction: column;
 }
 
-
 .contact .submit {
   width: 200px;
   height: 50px;
-
-/* VIDEOS START */
-.videos{
-    width: 100vw;
-    background-color: #f7f7f7;
-}
-.item-video{
-  width: 100%;
-}
-.owl-carousel .item-video .owl-item{
-  color: white;
-}
-.carouselVideo{
-  width: 100%;
 }
 /* CONTACT FINISH */
-  
+
 .shows {
     background: #3FBCED;
 }
@@ -307,7 +338,6 @@ section {
 .shows p {
     color: #F7F7F7;
 }
-
 
 .shows h1::after {
     border-bottom: 0.2em solid #F7F7F7;
