@@ -1,4 +1,4 @@
-/*
+/* 
 
 Sea blue: #3FBCED
 Tangeringe: #F18F01
@@ -50,11 +50,11 @@ p {
 }
 
 ::-webkit-scrollbar-track {
-    background: #F7F7F7;
+    background: #F7F7F7; 
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #353531;
+    background: #353531; 
 }
 
 ::-webkit-scrollbar-corner {
@@ -81,29 +81,44 @@ nav ul {
 
 /* SVG LOGO START */
 #SVGLOGO {
-    height: 5.5vh;
-    padding: 1vh 1vw;
+    height: 6.5vh;
+    padding: 0.5vh 1vw;
     cursor: pointer;
 }
 
-.SVGLOGO_line {
+#SVGLOGO .stroke {
     fill: none;
     stroke: #353531;
     stroke-miterlimit: 10;
-    stroke-width: 21px;
 }
 
-#SVGLOGO_ellipseLeft {
-    stroke: #353531;
-    stroke-miterlimit: 10;
-    stroke-width: 21px;
+#SVGLOGO .stroke18 {
+    stroke-width: 18;
+}
+
+#SVGLOGO .stroke17 {
+    stroke-width: 17;
+}
+
+#SVGLOGO .fill {
     fill: #353531;
-}
-
-#SVGLOGO_ellipseRight {
     stroke: #353531;
     stroke-miterlimit: 10;
-    stroke-width: 18.5px;
+}
+
+#SVGLOGO .fill16 {
+    stroke-width: 16.4339;
+}
+
+#SVGLOGO .fill11 {
+    stroke-width: 11.7744;
+}
+
+#SVGLOGO .fill18 {
+    stroke-width: 18;
+}
+
+#SVGLOGO .fullfill {
     fill: #353531;
 }
 /* SVG LOGO FINISH */
@@ -211,7 +226,7 @@ section {
     width: auto;
 }
 
-.sectionHeader h1::after {
+.sectionHeader h1::after { 
     border-bottom: 0.2em solid #353531;
     content: "";
     left: 0;
@@ -252,23 +267,25 @@ section {
     font-weight: 900;
     font-size: 7.5em;
     text-transform: uppercase;
-    margin-top: 60vh;
+    margin-top: 3.75vh;
 }
 /* HOME FINISH */
 
-/* BIOGRAFIE START */
-
-.biografieFotos {
+/* BAND START */
+.bandFotos {
     width: 80vw;
     height: 40vh;
     display: flex;
     justify-content: space-around;
 }
 
-.biografieFoto {
+.bandFoto {
     width: 17.5vw;
     height: 17.5vw;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .portretKoen {
@@ -295,16 +312,26 @@ section {
     background-size: cover;
 }
 
-/* BIOGRAFIE FINISH */
-
-/* CONTACT START */
-
-.contact .sectionContent {
-    padding: 0px;
-
+.portretBio {
+    padding-bottom: 2vh;
+    text-align: center;
 }
 
-/* .contact .contact-left {
+.portretBio .portretBioN {
+    color: #F7F7F7;
+    font-size: 1.2em;
+    font-weight: 800;
+}
+
+.portretBio .portretBioR {
+    color: #F7F7F7;
+    font-size: 0.8em;
+    font-weight: 400;
+}
+/* BAND FINISH */
+
+/* CONTACT START */
+.contact .contact-left {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -314,45 +341,25 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-} */
-
+}
 
 .contact form {
-  height: 40vh;
-  width: 70vw;
+  height: 30%;
+  width: 50vw;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
-  color: #F7F7F7;
 }
 
 .contact form fieldset {
    border: none;
-   margin-top: 20px;
-
-}
-
-.contact form fieldset input {
-   width: 30vw;
-   height: 5vh;
-   margin-top: 5px;
-   padding: 5px;
-   font-size: 17px;
-}
-
-.contact form fieldset textarea {
-   width: 30vw;
+   display: flex;
+   flex-direction: column;
 }
 
 .contact .submit {
   width: 200px;
   height: 50px;
-  margin-top: 20px;
-  background-color: #F7F7F7;
-  border-style: none;
-  color: #353531;
-  font-size: 17px;
 }
 /* CONTACT FINISH */
 

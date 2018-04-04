@@ -1,18 +1,18 @@
 <?php
     session_start();
+    include_once('includes/connection.php');
 ?>
 <html lang="nl">
     <head>
         <?php include_once('includes/header.php'); ?>
     </head>
     <body>
-        <?php include_once('includes/loader.php'); ?>
         <header>
             <nav>
                 <ul>
                     <div></div>
                     <div>
-                        <li id="nav_biografie">Biografie</li>
+                        <li id="nav_band">Band</li>
                         <li id="nav_shows">Shows</li>
                         <li id="nav_videos">Videos</li>
                     </div>
@@ -39,8 +39,8 @@
             <section class="home">
                 <?php include_once('modules/home.php'); ?>
             </section>
-            <section class="biografie">
-                <?php include_once('modules/biografie.php'); ?>
+            <section class="band">
+                <?php include_once('modules/band.php'); ?>
             </section>
             <section class="shows">
                 <?php include_once('modules/shows.php'); ?>
