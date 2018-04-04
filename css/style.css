@@ -1,4 +1,4 @@
-/* 
+/*
 
 Sea blue: #3FBCED
 Tangeringe: #F18F01
@@ -50,11 +50,11 @@ p {
 }
 
 ::-webkit-scrollbar-track {
-    background: #F7F7F7; 
+    background: #F7F7F7;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #353531; 
+    background: #353531;
 }
 
 ::-webkit-scrollbar-corner {
@@ -211,7 +211,7 @@ section {
     width: auto;
 }
 
-.sectionHeader h1::after { 
+.sectionHeader h1::after {
     border-bottom: 0.2em solid #353531;
     content: "";
     left: 0;
@@ -298,7 +298,13 @@ section {
 /* BIOGRAFIE FINISH */
 
 /* CONTACT START */
-.contact .contact-left {
+
+.contact .sectionContent {
+    padding: 0px;
+
+}
+
+/* .contact .contact-left {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -308,25 +314,45 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-}
+} */
+
 
 .contact form {
-  height: 30%;
-  width: 50vw;
+  height: 40vh;
+  width: 70vw;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  color: #F7F7F7;
 }
 
 .contact form fieldset {
    border: none;
-   display: flex;
-   flex-direction: column;
+   margin-top: 20px;
+
+}
+
+.contact form fieldset input {
+   width: 30vw;
+   height: 5vh;
+   margin-top: 5px;
+   padding: 5px;
+   font-size: 17px;
+}
+
+.contact form fieldset textarea {
+   width: 30vw;
 }
 
 .contact .submit {
   width: 200px;
   height: 50px;
+  margin-top: 20px;
+  background-color: #F7F7F7;
+  border-style: none;
+  color: #353531;
+  font-size: 17px;
 }
 /* CONTACT FINISH */
 
