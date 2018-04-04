@@ -1,10 +1,10 @@
 $(document).ready(function() {
     $("#SVGLOGO").on({
         mouseenter: function(){
-            $(this).css({height: "7vh", padding: "0.25vh 1vw", transition: "0.5s"});
+            $(this).css({height: "7.25vh", padding: "0.125vh 1vw", transition: "0.5s"});
         },
         mouseleave: function(){
-            $(this).css({height: "5.5vh", padding: "1vh 1vw", transition: "0.5s"});
+            $(this).css({height: "6.5vh", padding: "0.5vh 1vw", transition: "0.5s"});
         },
         click: function(){
             $("html, body").animate({scrollTop: 0}, 750);
