@@ -4,7 +4,7 @@ De gemaakte website voor Moeders Mooiste is hier te vinden. De gehele brondcode 
 
 Dit project is gemaakt door enkele studenten van de [Fontys Hogeschool ICT](https://fontys.nl/hbo-ict/) in opdracht van de band [Moeders Mooiste](http://moedersmooisteband.nl/) van de [Fontys Rockacademie](https://fontys.nl/rockacademie/) in Tilburg.
 
-Live website is [hier](https://maxaltena.com/MM/) te vinden.
+Live website is [hier](https://maxaltena.com/Moedersmooiste/) te vinden.
 
 ## Makers
 
