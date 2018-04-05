@@ -5,35 +5,35 @@ $successMessage = "";
 
 if ($_POST) {
     if (!$_POST["email"]) {
-        $error .= "An email address is required.<br>";
+        $error .= "Een email address is verplicht.<br>";
     }
-    
+
     if (!$_POST["content"]) {
-        $error .= "The content field is required.<br>";
+        $error .= "Het berichten veld moet ingevuld zijn.<br>";
     }
-    
+
     if (!$_POST["subject"]) {
-        $error .= "The subject is required.<br>";
+        $error .= "Een onderwerp is verplicht.<br>";
     }
-    
+
     if ($_POST['email'] && filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) === false) {
-        $error .= "The email address is invalid.<br>";
+        $error .= "Het ingevulde email address is niet geldig.<br>";
     }
-    
+
     if ($error != "") {
-        $error = '<div class="alert alert-danger" role="alert"><p>There were error(s) in your form:</p>' . $error . '</div>';
+        $error = 'Er waren 1 of meer fouten in het contact veld. Probeer het nog een keer! <br />' . $error;
     }
     else {
-        $emailTo = "dylano.hartman@gmail.com";
+        $emailTo = "";
         $subject = $_POST['subject'];
         $content = $_POST['content'];
         $headers = "From: ".$_POST['email'];
-        
+
         if (mail($emailTo, $subject, $content, $headers)) {
-            $successMessage = '<div class="success" role="alert">Your message was sent, we\'ll get back to you ASAP!</div>';
+            $successMessage = 'Je bericht is verzonden. We komen zo spoedig mogenlijk bij je terug!';
         }
         else {
-            $error = '<div class="error" role="alert"><p><strong>Your message couldn\'t be sent - please try again later</div>';
+            $error = '<strong>Je bericht kon niet verzonden worden. Probeer het later nog eens!';
         }
     }
 }
@@ -45,28 +45,30 @@ if ($_POST) {
 <div class="sectionContent">
     <p>Neem contact met ons op!</p>
 
-    <div id="error"><?php echo $error; ?></div>
+
     <form method="post">
         <div class="contact-left">
             <fieldset>
-                <label for="name">Naam:</label>
+                <label for="name">Naam:<br /></label>
                 <input type="text" name="name" placeholder="naam" class="name">
             </fieldset>
             <fieldset>
-                <label for="email">Email:</label>
+                <label for="email">Email:<br /></label>
                 <input type="email" name="email" placeholder="mail" class="email">
             </fieldset>
         </div>
         <div class="contact-right">
             <fieldset>
-                <label for="subject">Onderwerp:</label>
-                <input type="text" name="subject" placeholder="subject" class="subject">
+                <label for="subject">Onderwerp:<br /></label>
+                <input type="text" name="subject" placeholder="onderwerp" class="subject">
             </fieldset>
             <fieldset>
-                <label for="message">Je bericht:</label>
-                <textarea name="content" rows="8" cols="80" class="content"></textarea>
+                <label for="message">Je bericht:<br /></label>
+                <textarea name="content" rows="8" cols="20" class="bericht"></textarea>
             </fieldset>
             <button type="submit" name="button" class="submit">Verzenden</button>
         </div>
     </form>
+
+    <p><?php echo $error; ?></p>
 </div>
