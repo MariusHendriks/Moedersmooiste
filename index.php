@@ -1,15 +1,18 @@
+<?php
+    session_start();
+    include_once('includes/connection.php');
+?>
 <html lang="nl">
     <head>
         <?php include_once('includes/header.php'); ?>
     </head>
     <body>
-        <?php include_once('includes/loader.php'); ?>
         <header>
             <nav>
                 <ul>
                     <div></div>
                     <div>
-                        <li id="nav_biografie">Biografie</li>
+                        <li id="nav_band">Band</li>
                         <li id="nav_shows">Shows</li>
                         <li id="nav_videos">Videos</li>
                     </div>
@@ -30,14 +33,14 @@
                     </div>
                 </ul>
             </nav>
-
+            
         </header>
         <main>
             <section class="home">
                 <?php include_once('modules/home.php'); ?>
             </section>
-            <section class="biografie">
-                <?php include_once('modules/biografie.php'); ?>
+            <section class="band">
+                <?php include_once('modules/band.php'); ?>
             </section>
             <section class="shows">
                 <?php include_once('modules/shows.php'); ?>
@@ -55,10 +58,6 @@
                 <?php include_once('modules/contact.php'); ?>
             </section>
         </main>
-<<<<<<< HEAD
-        <script src="scripts/owl.carousel.min.js"></script>
-=======
->>>>>>> 5996b6569d351da06484a4dbfd7d5275b64b9022
         <script src="scripts/script.js"></script>
     </body>
 </html>

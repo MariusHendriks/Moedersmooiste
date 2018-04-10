@@ -1,22 +1,34 @@
 $(document).ready(function() {
     $("#SVGLOGO").on({
         mouseenter: function(){
-            $(this).css({height: "7vh", padding: "0.25vh 1vw", transition: "0.5s"});
+            $(this).css({height: "7.25vh", padding: "0.125vh 1vw", transition: "0.5s"});
         },
         mouseleave: function(){
-            $(this).css({height: "5.5vh", padding: "1vh 1vw", transition: "0.5s"});
+            $(this).css({height: "6.5vh", padding: "0.5vh 1vw", transition: "0.5s"});
         },
         click: function(){
             $("html, body").animate({scrollTop: 0}, 750);
         }
     });
-
+    
+    var clicked = false;
     $("header nav ul div li").on("click", function() {
-        var navID = this.id;
-        var navArray = navID.split('_');
-        var offset = $("nav").height();
-        $("html, body").animate({scrollTop: $("."+navArray[1]).offset().top - offset}, 750);
+        if (clicked === false) {
+            clicked = true;
+            var navID = this.id;
+            var navArray = navID.split('_');
+            var offset = $("nav").height();
+            
+            $("html, body").animate({scrollTop: $("."+navArray[1]).offset().top - offset}, 750);
+            
+            setTimeout(changeClicked, 750);
+        }
     });
+    
+    function changeClicked() {     
+        clicked = false;
+    }
+    
     $(".socialicons").on({
         mouseenter: function(){
             switch (this.id) {
@@ -30,7 +42,7 @@ $(document).ready(function() {
                     $(".fa-facebook path").css({fill: "rgba(53, 53, 49, 0.6)", transition: "0.2s"});
                     break;
                 case "instagram-FA":
-                    $(".fa-insagram path").css({fill: "rgba(53, 53, 49, 0.6)", transition: "0.2s"});
+                    $(".fa-instagram path").css({fill: "rgba(53, 53, 49, 0.6)", transition: "0.2s"});
                     break;
                 case "youtube-FA":
                     $(".fa-youtube path").css({fill: "rgba(53, 53, 49, 0.6)", transition: "0.2s"});

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1>Video</h1>
 <div class="owl-carousel owl-theme">
     <div class="item-video" data-merge="1.3"><a class="owl-video" href="https://www.youtube.com/watch?v=ddZlaO_48og"></a></div>
@@ -32,3 +33,11 @@
   });
 
 </script>
+=======
+<div class="sectionHeader">
+    <h1>Videos</h1>
+</div>
+<div class="sectionContent">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque voluptatibus, corporis quis ea nam praesentium! Debitis libero officiis, nihil voluptatum labore atque harum doloremque, deleniti ipsa enim explicabo possimus nobis eligendi sequi veniam dolorem soluta veritatis vero alias recusandae rem, reiciendis iste. Aliquid, earum expedita fuga ea dolore laudantium placeat numquam reprehenderit. Distinctio amet in consequatur, quibusdam consectetur, obcaecati hic voluptas praesentium eum quaerat nam quis, neque aut voluptatibus voluptate illo expedita velit est sapiente sequi natus odit ea fugiat. Commodi, adipisci vero enim placeat est dolores tempora ipsa, consequuntur blanditiis incidunt. Iste quidem, ea eum nisi placeat perferendis perspiciatis.</p>
+</div>
+>>>>>>> 54fd7548ff5533fdbd6c4d6262d3e8eff6386a95
