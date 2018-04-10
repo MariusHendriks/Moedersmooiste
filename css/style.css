@@ -208,17 +208,23 @@ nav li:hover::after {
 
 /* VIDEOS START */
 .videos{
-    width: 100vw;
-    background-color: #f7f7f7;
-}
-.item-video{
-  width: 100%;
+  width: 100vw;
+  background-color: #f7f7f7;
 }
 .owl-carousel .item-video .owl-item{
-  color: white;
+  color: #f7f7f7;
+  height: 250px!important;
 }
-.carouselVideo{
-  width: 100%;
+.owl-carousel .owl-video-wrapper{
+  background: #f7f7f7!important;
+  height: inherit!important;
+}
+.owl-item{
+  height: 250px;
+}
+.owl-carousel .owl-dots.disabled  {
+  display: flex!important;
+  justify-content: center;
 }
 /* VIDEOS FINISH */
 
