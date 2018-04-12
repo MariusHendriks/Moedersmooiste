@@ -33,7 +33,9 @@
                     </div>
                 </ul>
             </nav>
-            
+            <div id="progressContainer">
+                <div id="progressBar"></div>
+            </div>
         </header>
         <main>
             <section class="home">
@@ -59,5 +61,13 @@
             </section>
         </main>
         <script src="scripts/script.js"></script>
+        <script>
+            $(window).scroll(function(){
+                var winScroll = $("body").scrollTop();
+                var height = $("body")[0].scrollHeight - $("body")[0].clientHeight;
+                var scrolled = (winScroll / height) * 100;
+                $("#progressBar").width(scrolled + "%");
+            });
+        </script>
     </body>
 </html>
