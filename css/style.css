@@ -45,7 +45,11 @@ p {
     color: #353531;
 }
 
-::-webkit-scrollbar {
+::-webkit-scrollbar { 
+    display: none;
+}
+
+/*::-webkit-scrollbar {
     width: 10px;
 }
 
@@ -59,17 +63,21 @@ p {
 
 ::-webkit-scrollbar-corner {
     background: #F7F7F7;
-}
+}*/
 
 /* HEADER START */
 header {
     position: fixed;
     width: 100vw;
     background-color: rgba(247, 247, 247, 0.82);
-    height: 7.5vh;
+    height: 8.5vh;
     line-height: 7.5vh;
     box-shadow: 0 0 1vh;
     z-index: 2147483646;
+}
+
+nav {
+    line-height: 7.5vh;
 }
 
 nav ul {
@@ -77,6 +85,17 @@ nav ul {
     justify-content: center;
     align-items: center;
     list-style: none;
+}
+
+#progressContainer {
+    height: 1vh;
+    width: 100%;
+}
+
+#progressBar {
+    height: 1vh;
+    width: 0%;
+    background: #202020;
 }
 
 /* SVG LOGO START */
@@ -329,26 +348,7 @@ section {
     font-weight: 400;
 }
 /* BAND FINISH */
-/* VIDEOS START */
-.videos{
-  width: 100vw;
-  background-color: #f7f7f7;
-}
-.owl-carousel .item-video .owl-item{
-  color: #f7f7f7;
-  height: 250px!important;
-}
-.owl-carousel .owl-video-wrapper{
-  background: #f7f7f7!important;
-  height: inherit!important;
-}
-.owl-item{
-  height: 250px;
-}
-.owl-carousel .owl-dots.disabled  {
-  display: flex!important;
-  justify-content: center;
-}
+
 /* CONTACT START */
 
 .contact .sectionContent {
@@ -446,3 +446,213 @@ section {
 .contact h1::after {
     border-bottom: 0.2em solid #F7F7F7;
 }
+
+/* start of admin content */
+
+#loginBody {
+    width: 100%;
+    height: 100%;
+    background: #F7F7F7;
+}
+
+#loginBody #loginBodyChild {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loginBody #loginBodyChild #backTo {
+    position: absolute;
+    top: 3vh;
+    left: 3vh;
+    padding: 1vh;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 1.75vh;
+}
+
+#loginBody #loginBodyChild #backTo:hover {
+    text-decoration: line-through;
+}
+
+#loginBody #loginBodyChild #error {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 31vh;
+    text-align: center;
+}
+
+#loginBody #loginBodyChild #error small#errorText {
+    color: #FF0000;
+    font-size: 1.5vh;
+}
+
+#loginBody #loginBodyChild #container {
+    width: 25vw;
+    height: 30vh;
+    background: #353531;
+    box-shadow: 0.2vh 0.2vh 0.6vh #777777;
+}
+
+#loginBody #loginBodyChild #container #switchContainer {
+    width: 25vw;
+    height: 5vh;
+}
+
+#loginBody #loginBodyChild #container #switchContainer *, #loginBody #loginBodyChild #container #switchContainer *:before, #loginBody #loginBodyChild #container #switchContainer *:after {
+    box-sizing: border-box;
+}
+
+#loginBody #loginBodyChild #container #switchContainer input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#loginBody #loginBodyChild #container #switchContainer input[type="checkbox"]:checked ~ label .switchDiv:before {
+    content: attr(data-unchecked);
+    left: 0;
+}
+
+#loginBody #loginBodyChild #container #switchContainer input[type="checkbox"]:checked ~ label .switchDiv:after {
+    content: attr(data-checked);
+}
+
+#loginBody #loginBodyChild #container #switchContainer label {
+    user-select: none;    
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#loginBody #loginBodyChild #container #switchContainer label .switchDiv {
+    position: relative;
+}
+
+#loginBody #loginBodyChild #container #switchContainer label .switchDiv:before {
+    content: attr(data-checked);
+    position: absolute;
+    top: 0;
+    text-align: center;
+}
+
+#loginBody #loginBodyChild #container #switchContainer label .switchDiv:after {
+    content: attr(data-unchecked);
+    position: absolute;
+    z-index: 5;
+    text-align: center;
+    background: #353531;
+    color: #F7F7F7;
+    transform: translate3d(0, 0, 0);
+}
+
+#loginBody #loginBodyChild #container #switchContainer input[type="checkbox"]:checked ~ label .switchDiv {
+    background-color: #F7F7F7;
+}
+
+#loginBody #loginBodyChild #container #switchContainer input[type="checkbox"]:checked ~ label .switchDiv:after {
+    color: #F7F7F7;
+}
+
+#loginBody #loginBodyChild #container #switchContainer label .switchDiv {
+    transition: background-color 0.3s cubic-bezier(0, 1, 0.5, 1);
+    background: #F7F7F7;
+}
+
+#loginBody #loginBodyChild #container #switchContainer label .switchDiv:before {
+    color: #353531;
+}
+
+#loginBody #loginBodyChild #container #switchContainer label .switchDiv:after {
+    transition: transform 0.3s cubic-bezier(0, 1, 0.5, 1);
+}
+
+#loginBody #loginBodyChild #container #switchContainer input[type="checkbox"]:checked ~ label .switchDiv:after {
+    transform: translate3d(12.5vw, 0, 0);
+}
+
+#loginBody #loginBodyChild #container #switchContainer label .switchDiv {
+    height: 5vh;
+    flex: 0 0 25vw;
+}
+
+#loginBody #loginBodyChild #container #switchContainer label .switchDiv:before {
+    left: 12.5vw;
+    font-size: calc(5vh / 2.5);
+    line-height: 5vh;
+    width: 12.5vw;
+    padding: 0 calc(5vh / 2.5);
+}
+
+#loginBody #loginBodyChild #container #switchContainer label .switchDiv:after {
+    top: 0;
+    left: 0;
+    width: 12.5vw;
+    line-height: 5vh;
+    font-size: calc(5vh / 2.5);
+    padding-bottom: 1%;
+}
+
+#loginBody #loginBodyChild #container #formContainer {
+  width: 25vw;
+  height: 25vh;
+}
+
+#loginBody #loginBodyChild #container #formContainer form {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+#loginBody #loginBodyChild #container #formContainer form input[type=text],
+#loginBody #loginBodyChild #container #formContainer form input[type=password],
+#loginBody #loginBodyChild #container #formContainer form input[type=submit] {
+    width: 100% - 3.5vh;
+    height: 6vh;
+    border: none;
+    outline: none;
+    background: none;
+    margin: 0 calc(7vh / 2); 
+    border: 0.1vh solid #F7F7F7;
+}
+
+#loginBody #loginBodyChild #container #formContainer form input[type=text],
+#loginBody #loginBodyChild #container #formContainer form input[type=password] {
+    cursor: text;
+    color: #F7F7F7;
+    font-size: 1.75vh;
+    padding: 0 1vw;
+}
+
+#loginBody #loginBodyChild #container #formContainer form input[type=text]::placeholder,
+#loginBody #loginBodyChild #container #formContainer form input[type=password]::placeholder {
+    color: #9E9E9E;
+}
+
+#loginBody #loginBodyChild #container #formContainer form input[type=submit] {
+    cursor: pointer;
+    font-size: 2vh;
+    color: #F7F7F7;
+    text-decoration: underline;
+}
+
+#loginBody #loginBodyChild #container #formContainer form input[type=submit]:hover,
+#loginBody #loginBodyChild #container #formContainer form input[type=submit]:active {
+    text-decoration: line-through;
+}
+
+.ui-effects-transfer {
+    border: 0.1vh solid #F7F7F7;
+}
+
+
+
+/* end of admin content */
