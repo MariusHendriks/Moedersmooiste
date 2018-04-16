@@ -21,13 +21,9 @@ $(document).ready(function() {
             
             $("html, body").animate({scrollTop: $("."+navArray[1]).offset().top - offset}, 750);
             
-            setTimeout(changeClicked, 750);
+            setTimeout(function(){ clicked = false; }, 750);
         }
     });
-    
-    function changeClicked() {     
-        clicked = false;
-    }
     
     $(".socialicons").on({
         mouseenter: function(){
