@@ -45,7 +45,7 @@ p {
     color: #353531;
 }
 
-::-webkit-scrollbar { 
+::-webkit-scrollbar {
     display: none;
 }
 
@@ -279,7 +279,10 @@ section {
     justify-content: center;
     align-items: center;
 }
-
+.owl-video-wrapper{
+  height: 200px!important;
+  background-color: #fff!important;
+}
 #splashH1 {
     color: #F7F7F7;
     font-family: 'Prompt', sans-serif;
@@ -525,7 +528,7 @@ section {
 }
 
 #loginBody #loginBodyChild #container #switchContainer label {
-    user-select: none;    
+    user-select: none;
     position: relative;
     display: flex;
     align-items: center;
@@ -620,7 +623,7 @@ section {
     border: none;
     outline: none;
     background: none;
-    margin: 0 calc(7vh / 2); 
+    margin: 0 calc(7vh / 2);
     border: 0.1vh solid #F7F7F7;
 }
 
