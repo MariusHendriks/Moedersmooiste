@@ -350,6 +350,15 @@ section {
 }
 /* BAND FINISH */
 
+/* VIDEOS START */
+
+.owl-video-wrapper{
+  height: 200px!important;
+  background-color: #fff!important;
+}
+
+/* VIDEOS END */
+
 /* CONTACT START */
 
 .contact .sectionContent {
