@@ -1,5 +1,5 @@
 <div class="sectionHeader">
-    <h1>Muziek</h1>
+    <h1>Videos</h1>
 </div>
 <div class="owl-carousel owl-theme">
     <div class="item-video" data-merge="1.3"><a class="owl-video" href="https://www.youtube.com/watch?v=ddZlaO_48og"></a></div>
