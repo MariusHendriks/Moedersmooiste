@@ -14,6 +14,7 @@ if (isset($_POST['username'], $_POST['password'])) {
 
     if ($result == true) {
         $_SESSION['getUsername'] = $username;
+        $_SESSION['password_noMD5'] = $_POST['password'];
         echo('Login');
     }
     else {

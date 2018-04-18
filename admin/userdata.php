@@ -12,7 +12,7 @@ if(isset($_SESSION['getUsername'])) {
     
     $_SESSION['user_id'] = $userinfo['id'];
     $_SESSION['username'] = $userinfo['username'];
-    $_SESSION['password'] = $userinfo['password'];
+    $_SESSION['password_MD5'] = $userinfo['password'];
     $_SESSION['rank'] = $userinfo['rank'];
     
     $_SESSION['ingelogd'] = true;

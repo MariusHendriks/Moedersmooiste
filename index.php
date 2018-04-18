@@ -5,7 +5,6 @@
 <html lang="nl">
     <head>
         <?php include_once('includes/header.php'); ?>
-
     </head>
     <body>
         <header>
@@ -62,14 +61,5 @@
             </section>
         </main>
         <script src="scripts/script.js"></script>
-
-        <script>
-            $(window).scroll(function(){
-                var winScroll = $("body").scrollTop();
-                var height = $("body")[0].scrollHeight - $("body")[0].clientHeight;
-                var scrolled = (winScroll / height) * 100;
-                $("#progressBar").width(scrolled + "%");
-            });
-        </script>
     </body>
 </html>
