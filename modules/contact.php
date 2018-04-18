@@ -5,23 +5,23 @@ $successMessage = "";
 
 if ($_POST) {
     if (!$_POST["email"]) {
-        $error .= "Een email address is verplicht.<br>";
+        $error .= "<p>Een email address is verplicht.</p>";
     }
 
     if (!$_POST["content"]) {
-        $error .= "Het berichten veld moet ingevuld zijn.<br>";
+        $error .= "<p>Het berichten veld moet ingevuld zijn.</p>";
     }
 
     if (!$_POST["subject"]) {
-        $error .= "Een onderwerp is verplicht.<br>";
+        $error .= "<p>Een onderwerp is verplicht.</p>";
     }
 
     if ($_POST['email'] && filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) === false) {
-        $error .= "Het ingevulde email address is niet geldig.<br>";
+        $error .= "<p>Het ingevulde email address is niet geldig.</p>";
     }
 
     if ($error != "") {
-        $error = 'Er waren 1 of meer fouten in het contact veld. Probeer het nog een keer! <br />' . $error;
+        $error = '<p>Er waren 1 of meer fouten in het contact veld. Probeer het nog een keer! </p>' . $error;
     }
     else {
         $emailTo = "";
