@@ -352,24 +352,47 @@ section {
 }
 /* BAND FINISH */
 
+/* SHOWS START */
+
+.showInfo {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.showInfo * {
+  width: 25vw;
+}
+
+.showInfo img {
+  width: 17px;
+  height: 23px;
+}
+
+.showInfo .showMoreInfo {
+  width: 200px;
+  background-color: rgba(219, 81, 75, 1);
+  text-decoration: none;
+  color: #F7F7F7;
+  border-radius: 9px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.showInfo .showMoreInfo:hover {
+    background-color: rgba(219, 81, 75, 0.8);
+}
+
+/* SHOWS FINISH */
+
 /* CONTACT START */
 
 .contact .sectionContent {
     padding: 0px;
 
 }
-
-/* .contact .contact-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.contact .contact-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-} */
 
 
 .contact form {
