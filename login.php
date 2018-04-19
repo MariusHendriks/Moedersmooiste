@@ -8,7 +8,6 @@ if (!isset($_SESSION['ingelogd'])) {
     <head>
         <title>Login | Moeders Mooiste</title>
         <?php include_once('includes/header.php'); ?>
-        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     </head>
     
     <body id="loginBody">
@@ -46,7 +45,7 @@ if (!isset($_SESSION['ingelogd'])) {
 <?php
 }
 else {
-    header('Location: /Moedersmooiste/');
+    header('Location: /Moedersmooiste/admin/');
     exit();
 }
 ?>

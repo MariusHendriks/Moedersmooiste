@@ -45,7 +45,7 @@ p {
     color: #353531;
 }
 
-::-webkit-scrollbar {
+::-webkit-scrollbar { 
     display: none;
 }
 
@@ -90,6 +90,7 @@ nav ul {
 #progressContainer {
     height: 1vh;
     width: 100%;
+    cursor: pointer;
 }
 
 #progressBar {
@@ -279,10 +280,7 @@ section {
     justify-content: center;
     align-items: center;
 }
-.owl-video-wrapper{
-  height: 200px!important;
-  background-color: #fff!important;
-}
+
 #splashH1 {
     color: #F7F7F7;
     font-family: 'Prompt', sans-serif;
@@ -352,7 +350,20 @@ section {
 }
 /* BAND FINISH */
 
+<<<<<<< HEAD
 /* SHOWS START */
+=======
+/* VIDEOS START */
+
+.owl-video-wrapper{
+  height: 200px!important;
+  background-color: #fff!important;
+}
+
+/* VIDEOS END */
+
+/* CONTACT START */
+>>>>>>> 8b1223cb2cf6155e769d2fa908ecd5cd9a87672a
 
 .showInfo {
   margin-top: 10px;
@@ -502,7 +513,7 @@ section {
 }
 
 #loginBody #loginBodyChild #backTo:hover {
-    text-decoration: line-through;
+    text-decoration: overline;
 }
 
 #loginBody #loginBodyChild #error {
@@ -551,7 +562,7 @@ section {
 }
 
 #loginBody #loginBodyChild #container #switchContainer label {
-    user-select: none;
+    user-select: none;    
     position: relative;
     display: flex;
     align-items: center;
@@ -646,7 +657,7 @@ section {
     border: none;
     outline: none;
     background: none;
-    margin: 0 calc(7vh / 2);
+    margin: 0 calc(7vh / 2); 
     border: 0.1vh solid #F7F7F7;
 }
 
@@ -672,13 +683,11 @@ section {
 
 #loginBody #loginBodyChild #container #formContainer form input[type=submit]:hover,
 #loginBody #loginBodyChild #container #formContainer form input[type=submit]:active {
-    text-decoration: line-through;
+    text-decoration: overline;
 }
 
 .ui-effects-transfer {
     border: 0.1vh solid #F7F7F7;
 }
-
-
 
 /* end of admin content */

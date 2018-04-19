@@ -7,6 +7,8 @@ if (isset($_SESSION['ingelogd'])) {
 <html lang="nl">
     <head>
         <title>Admin panel | Moeders Mooiste</title>
+        <?php include_once('../includes/header.php'); ?>
+        <link rel="stylesheet" type="text/css" href="/Moedersmooiste/css/admin.css">
     </head>
 
     <body>
@@ -17,48 +19,6 @@ if (isset($_SESSION['ingelogd'])) {
                     <div id="menu_logo_link">
                         <?php  include('../resources/logo.svg'); ?>
                     </div>
-                    <style>
-                    #SVGLOGO {
-    height: 6.5vh;
-    padding: 0.5vh 1vw;
-    cursor: pointer;
-}
-
-#SVGLOGO .stroke {
-    fill: none;
-    stroke: #353531;
-    stroke-miterlimit: 10;
-}
-
-#SVGLOGO .stroke18 {
-    stroke-width: 18;
-}
-
-#SVGLOGO .stroke17 {
-    stroke-width: 17;
-}
-
-#SVGLOGO .fill {
-    fill: #353531;
-    stroke: #353531;
-    stroke-miterlimit: 10;
-}
-
-#SVGLOGO .fill16 {
-    stroke-width: 16.4339;
-}
-
-#SVGLOGO .fill11 {
-    stroke-width: 11.7744;
-}
-
-#SVGLOGO .fill18 {
-    stroke-width: 18;
-}
-
-#SVGLOGO .fullfill {
-    fill: #353531;
-}</style>
                 </div>
                 <div class="item active" id="dashboard">Dashboard</div>
                 <div class="item" id="account">Mijn account</div>
@@ -76,8 +36,6 @@ if (isset($_SESSION['ingelogd'])) {
                     
                     if ($_SESSION['rank'] == 2) {  
                 ?>
-                <div class="item" id="rubrix">Rubrix' beheren</div>
-                <div class="item" id="categorie">Categorieën beheren</div>
                 <div class="item" id="rank">Ranks aanpassen</div>
                 <?php
                     }
@@ -89,7 +47,7 @@ if (isset($_SESSION['ingelogd'])) {
                 <div id="content"></div>
             </div>
         </div>
-        <script src="../scripts/admin.js"></script>
+        <script src="/Moedersmooiste/scripts/admin.js"></script>
     </body>
 </html>
 <?php
