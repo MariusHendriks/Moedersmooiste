@@ -17,13 +17,12 @@ $(document).ready(function() {
             clicked = true;
             var navID = this.id;
             var navArray = navID.split('_');
-<<<<<<< HEAD
-            var offset = $("nav").height();
 
-=======
+            // var offset = $("nav").height();
+
+
             var offset = $("header").height();
-            
->>>>>>> 8b1223cb2cf6155e769d2fa908ecd5cd9a87672a
+
             $("html, body").animate({scrollTop: $("."+navArray[1]).offset().top - offset}, 750);
 
             setTimeout(function(){ clicked = false; }, 750);
@@ -89,7 +88,6 @@ $(document).ready(function() {
             }
         }
     });
-<<<<<<< HEAD
 
 
     var $showsInfo = $('.showInfo');
@@ -127,16 +125,15 @@ $(document).ready(function() {
       });
     }
   });
-});
-=======
-    
+
+
     $(window).scroll(function(){
         var winScroll = $("body").scrollTop();
         var height = $("body")[0].scrollHeight - $("body")[0].clientHeight;
         var scrolled = (winScroll / height) * 100;
         $("#progressBar").width(scrolled + "%");
     });
-    
+
     $("#progressContainer").on("click", function(e){
         if (clicked === false) {
             clicked = true;
@@ -147,9 +144,8 @@ $(document).ready(function() {
             var pageheight = $("body")[0].scrollHeight - $("body")[0].clientHeight;
             var scrollposition = (pageheight / 100) * percentage;
             $("html, body").animate({scrollTop: scrollposition}, 750);
-            
+
             setTimeout(function(){ clicked = false; }, 750);
         }
     });
 });
->>>>>>> 8b1223cb2cf6155e769d2fa908ecd5cd9a87672a

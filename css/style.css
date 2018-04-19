@@ -45,7 +45,7 @@ p {
     color: #353531;
 }
 
-::-webkit-scrollbar { 
+::-webkit-scrollbar {
     display: none;
 }
 
@@ -349,22 +349,7 @@ section {
     font-weight: 400;
 }
 /* BAND FINISH */
-
-<<<<<<< HEAD
 /* SHOWS START */
-=======
-/* VIDEOS START */
-
-.owl-video-wrapper{
-  height: 200px!important;
-  background-color: #fff!important;
-}
-
-/* VIDEOS END */
-
-/* CONTACT START */
->>>>>>> 8b1223cb2cf6155e769d2fa908ecd5cd9a87672a
-
 .showInfo {
   margin-top: 10px;
   display: flex;
@@ -397,6 +382,16 @@ section {
 }
 
 /* SHOWS FINISH */
+
+/* VIDEOS START */
+
+.owl-video-wrapper{
+  height: 200px!important;
+  background-color: #fff!important;
+}
+
+/* VIDEOS END */
+
 
 /* CONTACT START */
 
@@ -562,7 +557,7 @@ section {
 }
 
 #loginBody #loginBodyChild #container #switchContainer label {
-    user-select: none;    
+    user-select: none;
     position: relative;
     display: flex;
     align-items: center;
@@ -657,7 +652,7 @@ section {
     border: none;
     outline: none;
     background: none;
-    margin: 0 calc(7vh / 2); 
+    margin: 0 calc(7vh / 2);
     border: 0.1vh solid #F7F7F7;
 }
 
