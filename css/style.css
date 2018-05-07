@@ -45,7 +45,7 @@ p {
     color: #353531;
 }
 
-::-webkit-scrollbar {
+::-webkit-scrollbar { 
     display: none;
 }
 
@@ -85,6 +85,10 @@ nav ul {
     justify-content: center;
     align-items: center;
     list-style: none;
+}
+
+.nav_link {
+    text-transform: uppercase;
 }
 
 #progressContainer {
@@ -349,39 +353,6 @@ section {
     font-weight: 400;
 }
 /* BAND FINISH */
-/* SHOWS START */
-.showInfo {
-  margin-top: 10px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.showInfo * {
-  width: 25vw;
-}
-
-.showInfo img {
-  width: 17px;
-  height: 23px;
-}
-
-.showInfo .showMoreInfo {
-  width: 200px;
-  background-color: rgba(219, 81, 75, 1);
-  text-decoration: none;
-  color: #F7F7F7;
-  border-radius: 9px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.showInfo .showMoreInfo:hover {
-    background-color: rgba(219, 81, 75, 0.8);
-}
-
-/* SHOWS FINISH */
 
 /* VIDEOS START */
 
@@ -392,13 +363,24 @@ section {
 
 /* VIDEOS END */
 
-
 /* CONTACT START */
 
 .contact .sectionContent {
     padding: 0px;
 
 }
+
+/* .contact .contact-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.contact .contact-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+} */
 
 
 .contact form {
@@ -557,7 +539,7 @@ section {
 }
 
 #loginBody #loginBodyChild #container #switchContainer label {
-    user-select: none;
+    user-select: none;    
     position: relative;
     display: flex;
     align-items: center;
@@ -652,7 +634,7 @@ section {
     border: none;
     outline: none;
     background: none;
-    margin: 0 calc(7vh / 2);
+    margin: 0 calc(7vh / 2); 
     border: 0.1vh solid #F7F7F7;
 }
 

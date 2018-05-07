@@ -37,38 +37,40 @@ if ($_POST) {
         }
     }
 }
+    $query = $PDO->prepare("SELECT * FROM content WHERE title = 'contact'");
+    $query->execute();
+    $module = $query->fetchAll();
 ?>
+<section class="<?= $module[0]['title']; ?>">
+    <div class="sectionHeader">
+        <h1><?= $module[0]['title']; ?></h1>
+    </div>
+    <div class="sectionContent">
+        <p><?= $module[0]['text']; ?></p>
+        <form method="post">
+            <div class="contact-left">
+                <fieldset>
+                    <label for="name">Naam:<br /></label>
+                    <input type="text" name="name" placeholder="naam" class="name">
+                </fieldset>
+                <fieldset>
+                    <label for="email">Email:<br /></label>
+                    <input type="email" name="email" placeholder="mail" class="email">
+                </fieldset>
+            </div>
+            <div class="contact-right">
+                <fieldset>
+                    <label for="subject">Onderwerp:<br /></label>
+                    <input type="text" name="subject" placeholder="onderwerp" class="subject">
+                </fieldset>
+                <fieldset>
+                    <label for="message">Je bericht:<br /></label>
+                    <textarea name="content" rows="8" cols="20" class="bericht"></textarea>
+                </fieldset>
+                <button type="submit" name="button" class="submit">Verzenden</button>
+            </div>
+        </form>
 
-<div class="sectionHeader">
-    <h1>CONTACT</h1>
-</div>
-<div class="sectionContent">
-    <p>Neem contact met ons op!</p>
-
-
-    <form method="post">
-        <div class="contact-left">
-            <fieldset>
-                <label for="name">Naam:<br /></label>
-                <input type="text" name="name" placeholder="naam" class="name">
-            </fieldset>
-            <fieldset>
-                <label for="email">Email:<br /></label>
-                <input type="email" name="email" placeholder="mail" class="email">
-            </fieldset>
-        </div>
-        <div class="contact-right">
-            <fieldset>
-                <label for="subject">Onderwerp:<br /></label>
-                <input type="text" name="subject" placeholder="onderwerp" class="subject">
-            </fieldset>
-            <fieldset>
-                <label for="message">Je bericht:<br /></label>
-                <textarea name="content" rows="8" cols="20" class="bericht"></textarea>
-            </fieldset>
-            <button type="submit" name="button" class="submit">Verzenden</button>
-        </div>
-    </form>
-
-    <p><?php echo $error; ?></p>
-</div>
+        <p><?php echo $error; ?></p>
+    </div>
+</section>

@@ -1,6 +1,10 @@
 <?php
     session_start();
     include_once('includes/connection.php');
+    
+    $query = $PDO->prepare("SELECT * FROM module ORDER BY 'order' ASC");
+    $query->execute();
+    $modules = $query->fetchAll();
 ?>
 <html lang="nl">
     <head>
@@ -12,17 +16,17 @@
                 <ul>
                     <div></div>
                     <div>
-                        <li id="nav_band">Band</li>
-                        <li id="nav_shows">Shows</li>
-                        <li id="nav_videos">Videos</li>
+                        <li class="nav_link" id="nav_<?= $modules[1][1]; ?>"><?= $modules[1][1]; ?></li>
+                        <li class="nav_link" id="nav_<?= $modules[2][1]; ?>"><?= $modules[2][1]; ?></li>
+                        <li class="nav_link" id="nav_<?= $modules[3][1]; ?>"><?= $modules[3][1]; ?></li>
                     </div>
                     <div>
                         <?php include_once('resources/logo.svg'); ?>
                     </div>
                     <div>
-                        <li id="nav_muziek">Muziek</li>
-                        <li id="nav_fotos">Fotos</li>
-                        <li id="nav_contact">Contact</li>
+                        <li class="nav_link" id="nav_<?= $modules[4][1]; ?>"><?= $modules[4][1]; ?></li>
+                        <li class="nav_link" id="nav_<?= $modules[5][1]; ?>"><?= $modules[5][1]; ?></li>
+                        <li class="nav_link" id="nav_<?= $modules[6][1]; ?>"><?= $modules[6][1]; ?></li>
                     </div>
                     <div>
                         <span class="socialicons" id="spotify-FA"><i class="fab fa-spotify fa-lg" style="color: #353531;"></i></span>
@@ -38,27 +42,11 @@
             </div>
         </header>
         <main>
-            <section class="home">
-                <?php include_once('modules/home.php'); ?>
-            </section>
-            <section class="band">
-                <?php include_once('modules/band.php'); ?>
-            </section>
-            <section class="shows">
-                <?php include_once('modules/shows.php'); ?>
-            </section>
-            <section class="videos">
-                <?php include_once('modules/videos.php'); ?>
-            </section>
-            <section class="muziek">
-                <?php include_once('modules/muziek.php'); ?>
-            </section>
-            <section class="fotos">
-                <?php include_once('modules/fotos.php'); ?>
-            </section>
-            <section class="contact">
-                <?php include_once('modules/contact.php'); ?>
-            </section>
+            <?php
+                foreach ($modules as $module) {
+                    include_once('modules/'.$module[1].'.php');
+                }
+            ?>
         </main>
         <script src="scripts/script.js"></script>
     </body>
