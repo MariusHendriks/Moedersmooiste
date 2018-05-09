@@ -10,10 +10,9 @@
     <div class="owl-carousel owl-theme">
         <?php
             $links = explode('|', $module[0]['video']);
-
+            
             foreach ($links as $value) {
                 ?>
-                   
                     <div class="item-video" data-merge="1.3"><a class="owl-video" href="<?= $value ?>"></a></div>
                 <?php
             }

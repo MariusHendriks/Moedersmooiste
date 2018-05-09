@@ -83,40 +83,6 @@ $(document).ready(function() {
         }
     });
     
-    var $showsInfo = $('.showInfo');
-    var $showList = $('.showList');
-    var date = new Date();
-    
-    function AddZero(n){
-        return n < 10 ? '0' + n :'' + n;
-    }
-    
-    function CheckAvaibleTickets(show) {
-        if (show.offers.length >= 1) {
-            return '<a href="'+ show.offers[0].url +'" class="showMoreInfo">'+ show.offers[0].type +'</a></div>';
-        }
-        else {
-            return '<a href="'+ show.url +'" class="showMoreInfo">Meer info</a></div>';
-        }
-    }
-    
-    function AddShow(show) {
-        var showDate = new Date(show.datetime).toUTCString().split(" ").slice(1,4).join(" ");
-        $showList.append('<div class="showInfo"><p>'+ showDate +'</p><p>'+ show.venue.name +
-        '</p><p>'+ show.venue.city +', '+ show.venue.country +'</p>' + CheckAvaibleTickets(show));
-    }
-    
-    $.ajax({
-        url: 'https://rest.bandsintown.com/artists/Moeders%20Mooiste/events?app_id=3588eefe9e412527c83889757754197c&date='+ date.getFullYear() + '-' + AddZero(date.getMonth() + 1) + '-' + AddZero(date.getDate() + 1) + '%2C'+ (date.getFullYear() + 2) +'-05-05',
-        type: 'GET',
-        success: function(shows) {
-            console.log(shows);
-            $.each(shows, function(i, show) {
-                AddShow(show);
-            });
-        }
-    });
-    
     $(window).scroll(function(){
         var winScroll = $("body").scrollTop();
         var height = $("body")[0].scrollHeight - $("body")[0].clientHeight;

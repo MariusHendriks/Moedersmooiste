@@ -4,6 +4,12 @@ include_once('../../includes/connection.php');
 
 if (isset($_SESSION['ingelogd'])) {
     if ($_SESSION['rank'] >= 1) {
+        
+        // if post isset -> post with 
+        // else load page where you can add with ajax call
+        // :)
+        
+        
 ?>
 <main>
     <div class="gridHeader">
