@@ -473,6 +473,76 @@ p.headerDashboardP {
     border: 0.1vh solid #DEDEDE;
 }
 
+.listContent {
+    background: #FFFFFF;
+    border: 1px solid #E9E9E9;
+    box-shadow: 2px 2px 6px #DEDEDE;
+    padding: 2%;
+}
+
+.adminContent {
+    background: #FFFFFF;
+    border: 1px solid #E9E9E9;
+    box-shadow: 2px 2px 6px #DEDEDE;
+    padding: 2%;
+}
+
+.gridForm {
+    display: grid;
+    grid-template-columns: 10% 5% auto auto;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-areas: 
+        "titleHeader . titleContent ."
+        "tekstHeader . tekstContent ."
+        "fotoHeader . fotoContent ."
+        "videoHeader . videoContent ."
+        "submit . . .";
+}
+
+.gridForm * {
+    width: 100%;
+}
+
+.titleP {
+    grid-area: titleHeader;
+}
+
+.title {
+    grid-area: titleContent;
+}
+
+.tekstP {
+    grid-area: tekstHeader;
+}
+
+.tekst {
+    grid-area: tekstContent;
+}
+
+.fotoP {
+    grid-area: fotoHeader;
+}
+
+.foto {
+    grid-area: fotoContent;
+}
+
+.videoP {
+    grid-area: videoHeader;
+}
+
+.video {
+    grid-area: videoContent;
+}
+
+.submit {
+    grid-area: submit;
+}
+
+.dropDownForm {
+    padding-bottom: 1%;
+}
+
 .rankContent {
     background: #FFFFFF;
     border: 1px solid #E9E9E9;

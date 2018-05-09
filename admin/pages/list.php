@@ -29,6 +29,10 @@ if (isset($_SESSION['ingelogd'])) {
             </thead>
             <tbody>
                 <?php
+                    $query = $PDO->prepare('SELECT orders FROM module ORDER BY orders ASC');
+                    $query->execute();
+                    $orders = $query->rowCount();
+                    
                     foreach($modules as $module){
                 ?>
                     <tr class="trModuleAll tr<?= $module['id']; ?>" id="<?= $module['orders']; ?>">
@@ -44,88 +48,16 @@ if (isset($_SESSION['ingelogd'])) {
                         <td>
                             <select id="select<?= $module['id']; ?>" name="select<?= $module['id']; ?>">
                                 <?php 
-                                switch ($module['orders']) {
-                                    default:
-                                    case 1:
+                                    for ($x = 1; $x <= $orders; $x++) {
                                 ?>
-                                    <option value="1" selected>1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
+                                    <option value="<?= $x; ?>"><?= $x; ?></option>
                                 <?php
-                                    break;
-                                    case 2:
-                                ?>
-                                    <option value="1">1</option>
-                                    <option value="2" selected>2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                <?php 
-                                    break;
-                                    case 3:
-                                ?>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3" selected>3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                <?php
-                                    break;
-                                    case 4:
-                                ?>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4" selected>4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                <?php
-                                    break;
-                                    case 5:
-                                ?>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5" selected>5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                <?php
-                                    break;
-                                    case 6:
-                                ?>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6" selected>6</option>
-                                    <option value="7">7</option>
-                                <?php
-                                    break;
-                                    case 7:
-                                ?>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7" selected>7</option>
-                                <?php
-                                    break;
-                                } 
+                                    }
                                 ?>
                             </select>
+                            <script>
+                                $("#select<?= $module['id']; ?> option[value='<?= $module['orders']; ?>']").prop("selected", true);
+                            </script>
                         </td>
                         <td>
                             <button id="button<?= $module['id']; ?>" name="button<?= $module['id']; ?>">Verander</button>

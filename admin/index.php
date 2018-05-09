@@ -30,7 +30,6 @@ if (isset($_SESSION['ingelogd'])) {
                 <div class="item" id="toevoegen">Toevoegen</div>
                 <div class="item" id="wijzigen">Wijzigen</div>
                 <div class="item" id="verwijderen">Verwijderen</div>
-                <div class="item" id="media">Media</div>
                 <?php
                     }
                     

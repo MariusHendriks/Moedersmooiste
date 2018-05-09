@@ -20,6 +20,7 @@ if (isset($_POST['username'], $_POST['password'])) {
             
         if ($resultRegister == true) {
             $_SESSION['getUsername'] = $username;
+            $_SESSION['password_noMD5'] = $_POST['password'];
             echo('Register');
         }
         else {

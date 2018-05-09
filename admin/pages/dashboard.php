@@ -27,7 +27,6 @@ if (isset($_SESSION['ingelogd'])) {
                 <div class="dashboardGridTopBottomChild"><span class="GOTOtoevoegen">Toevoegen</span></div>
                 <div class="dashboardGridTopBottomChild"><span class="GOTOwijzigen">Wijzigen</span></div>
                 <div class="dashboardGridTopBottomChild"><span class="GOTOverwijderen">Verwijderen</span></div>
-                <div class="dashboardGridTopBottomChild"><span class="GOTOmedia">Media</span></div>
                 <?php
                     }
                 ?>
