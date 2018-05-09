@@ -248,6 +248,7 @@ section {
     text-align: center;
     position: relative;
     width: auto;
+    padding-bottom: 4vh;
 }
 
 .sectionHeader h1::after {
@@ -257,11 +258,11 @@ section {
     margin-top: calc(0.2em / 2 * -1);
     position: absolute;
     right: 0;
-    top: 82.5%;
+    top: 60%;
 }
 
 .sectionContent {
-    padding: 4vh 5vw;
+    padding: 0 5vw 4vh 5vw;
 }
 
 .sectionContent p {
@@ -353,6 +354,41 @@ section {
     font-weight: 400;
 }
 /* BAND FINISH */
+
+/* SHOWS START */
+
+.showInfo {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.showInfo * {
+  width: 25vw;
+}
+
+.showInfo img {
+  width: 17px;
+  height: 23px;
+}
+
+.showInfo .showMoreInfo {
+  width: 200px;
+  background-color: rgba(219, 81, 75, 1);
+  text-decoration: none;
+  color: #F7F7F7;
+  border-radius: 9px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.showInfo .showMoreInfo:hover {
+    background-color: rgba(219, 81, 75, 0.8);
+}
+
+/* SHOWS FINISH */
 
 /* VIDEOS START */
 
