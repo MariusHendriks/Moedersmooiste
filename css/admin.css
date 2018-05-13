@@ -400,7 +400,7 @@ p.headerDashboardP {
 }
 
 .accountPasswordContentF3:hover {
-    text-decoration: line-through;
+    text-decoration: overline;
 }
 
 .accountContentForm {
@@ -562,7 +562,7 @@ p.headerDashboardP {
 }
 
 .filterOption:hover {
-    text-decoration: line-through;
+    text-decoration: overline;
 }
 
 .filterOption.activeFilter {
