@@ -7,7 +7,7 @@
     <div class="sectionHeader">
         <h1><?= $module[0]['title']; ?></h1>
     </div>
-    <div class="sectionContent">
-        <p><?= $module[0]['text']; ?></p>
+    <div id="instafeed">
+
     </div>
 </section>

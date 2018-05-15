@@ -10,7 +10,7 @@ $(document).ready(function() {
             $("html, body").animate({scrollTop: 0}, 750);
         }
     });
-    
+
     var clicked = false;
     $("header nav ul div li").on("click", function() {
         if (clicked === false) {
@@ -22,7 +22,7 @@ $(document).ready(function() {
             setTimeout(function(){ clicked = false; }, 750);
         }
     });
-    
+
     $(".socialicons").on({
         mouseenter: function(){
             switch (this.id) {
@@ -82,7 +82,7 @@ $(document).ready(function() {
             }
         }
     });
-    
+
     $(window).scroll(function(){
         var winScroll = $("body").scrollTop();
         var height = $("body")[0].scrollHeight - $("body")[0].clientHeight;
@@ -104,4 +104,16 @@ $(document).ready(function() {
             setTimeout(function(){ clicked = false; }, 750);
         }
     });
+
+    var feed = new Instafeed({
+        get: 'user',
+        userId: '7751777812',
+        accessToken: '7751777812.1677ed0.9b0180f8de9247fe89bd7bfca907aead',
+        template: '<a class="animation" href="{{link}}" target="_blank" ><img src="{{image}}"  /></a>'
+    });
+    feed.run();
+
+
+
+
 });

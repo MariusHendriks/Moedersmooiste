@@ -9,7 +9,7 @@ if (!isset($_SESSION['ingelogd'])) {
         <title>Login | Moeders Mooiste</title>
         <?php include_once('includes/header.php'); ?>
     </head>
-    
+
     <body id="loginBody">
         <div id="loginBodyChild">
             <main>

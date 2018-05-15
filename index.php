@@ -1,7 +1,7 @@
 <?php
     session_start();
     include_once('includes/connection.php');
-    
+
     $query = $PDO->prepare("SELECT * FROM module ORDER BY 'order' ASC");
     $query->execute();
     $modules = $query->fetchAll();
@@ -49,5 +49,6 @@
             ?>
         </main>
         <script src="scripts/script.js"></script>
+        <script src="scripts/instafeed.min.js"></script>
     </body>
 </html>
