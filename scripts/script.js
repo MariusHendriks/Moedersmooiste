@@ -109,7 +109,8 @@ $(document).ready(function() {
         get: 'user',
         userId: '7751777812',
         accessToken: '7751777812.1677ed0.9b0180f8de9247fe89bd7bfca907aead',
-        template: '<a class="animation" href="{{link}}" target="_blank" ><img src="{{image}}"  /></a>'
+        template: '<div class="instaImg"><a class="animation" href="{{link}}" target="_blank" ><img src="{{image}}"  /></a></div>',
+        resolution: 'standard_resolution'        
     });
     feed.run();
 

@@ -399,6 +399,26 @@ section {
 
 /* VIDEOS END */
 
+/* FOTOS START */
+
+#instafeed {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  text-align: center;
+}
+
+.instaImg:hover {
+  opacity: 0.8;
+}
+
+.instaImg a img {
+  width: 14vw;
+}
+
+/* FOTOS END */
+
 /* CONTACT START */
 
 .contact .sectionContent {
