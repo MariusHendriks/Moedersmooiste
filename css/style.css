@@ -374,6 +374,7 @@ section {
 
 .showInfo .showMoreInfo {
   width: 200px;
+  height: 60px;
   background-color: rgba(219, 81, 75, 1);
   text-decoration: none;
   color: #F7F7F7;
