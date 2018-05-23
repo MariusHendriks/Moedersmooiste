@@ -1,42 +1,57 @@
 <?php
 
-$error = "";
-$successMessage = "";
-
-if ($_POST) {
-    if (!$_POST["email"]) {
-        $error .= "Een email address is verplicht.<br>";
+if (isset($_POST['sendContact'])) {
+    function isEmpty($value) {
+        $strTemp = $value;
+        $strTemp = trim($strTemp);
+        
+        if($strTemp == ""){
+            return true;
+        }
+        return false;
     }
-
-    if (!$_POST["content"]) {
-        $error .= "Het berichten veld moet ingevuld zijn.<br>";
+    
+    $naam = $_POST['naam'];
+    $email = $_POST['email'];
+    $onderwerp = $_POST['onderwerp'];
+    $bericht = $_POST['bericht'];
+    $noErrors = true;
+    
+    
+    if(isEmpty($naam)){
+        echo("Geen naam ingevoerd!");
+        $noErrors = false;
     }
-
-    if (!$_POST["subject"]) {
-        $error .= "Een onderwerp is verplicht.<br>";
+    if(isEmpty($email)){
+        echo("Geen email ingevoerd!");
+        $noErrors = false;
     }
-
-    if ($_POST['email'] && filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) === false) {
-        $error .= "Het ingevulde email address is niet geldig.<br>";
+    if(isEmpty($onderwerp)){
+        echo("Geen onderwerp ingevoerd!");
+        $noErrors = false;
     }
-
-    if ($error != "") {
-        $error = 'Er waren 1 of meer fouten in het contact veld. Probeer het nog een keer! <br />' . $error;
+    if(isEmpty($bericht)){
+        echo("Geen bericht ingevoerd!");
+        $noErrors = false;
     }
-    else {
+    if($email && filter_var($email, FILTER_VALIDATE_EMAIL) === false){
+        echo("Ingevoerde email is niet geldig!");
+        $noErrors = false;
+    }
+    
+    if($noErrors === true){
         $emailTo = "";
-        $subject = $_POST['subject'];
-        $content = $_POST['content'];
-        $headers = "From: ".$_POST['email'];
+        $headers = "From: " . $email . "(" . $naam . ")";
 
-        if (mail($emailTo, $subject, $content, $headers)) {
-            $successMessage = 'Je bericht is verzonden. We komen zo spoedig mogenlijk bij je terug!';
+        if (mail($emailTo, $onderwerp, $bericht, $headers)) {
+            echo("Je bericht is verzonden! We komen zo spoedig mogelijk bij je terug!");
         }
         else {
-            $error = '<strong>Je bericht kon niet verzonden worden. Probeer het later nog eens!';
+            echo("Het bericht kon niet verzonden worden. Probeer het later nog eens!");
         }
     }
 }
+else {
     $query = $PDO->prepare("SELECT * FROM content WHERE title = 'contact'");
     $query->execute();
     $module = $query->fetchAll();
@@ -46,31 +61,59 @@ if ($_POST) {
         <h1><?= $module[0]['title']; ?></h1>
     </div>
     <div class="sectionContent">
-        <p><?= $module[0]['text']; ?></p>
-        <form method="post">
+        <p style="margin-left: 9%;"><?= $module[0]['text']; ?></p>
+        <form method="post" id="contactForm">
             <div class="contact-left">
                 <fieldset>
-                    <label for="name">Naam:<br /></label>
-                    <input type="text" name="name" placeholder="naam" class="name">
+                    <label for="name">Naam: *</label>
+                    <input type="text" name="name" placeholder="Naam" class="name" required>
                 </fieldset>
                 <fieldset>
-                    <label for="email">Email:<br /></label>
-                    <input type="email" name="email" placeholder="mail" class="email">
+                    <label for="email">Email: *</label>
+                    <input type="email" name="email" placeholder="Email" class="email" required>
                 </fieldset>
             </div>
             <div class="contact-right">
                 <fieldset>
-                    <label for="subject">Onderwerp:<br /></label>
-                    <input type="text" name="subject" placeholder="onderwerp" class="subject">
+                    <label for="subject">Onderwerp: *</label>
+                    <input type="text" name="subject" placeholder="Onderwerp" class="subject" required>
                 </fieldset>
                 <fieldset>
-                    <label for="message">Je bericht:<br /></label>
-                    <textarea name="content" rows="8" cols="20" class="bericht"></textarea>
+                    <label for="message">Je bericht: *</label>
+                    <textarea name="content" rows="5" cols="20" class="bericht" placeholder="Typ hier je bericht..." required></textarea>
                 </fieldset>
-                <button type="submit" name="button" class="submit">Verzenden</button>
+                <input type="submit" name="button" class="submit" value="Verzenden" />
             </div>
         </form>
-
-        <p><?php echo $error; ?></p>
+        <script>
+            $("#contactForm").submit(function(e){
+                e.preventDefault();
+                
+                $.ajax({
+                    type: "POST",
+                    url: "/Moedersmooiste/modules/contact",
+                    data: {
+                        sendContact: "Y",
+                        naam: $(".name").val(),
+                        email: $(".email").val(),
+                        onderwerp: $(".subject").val(),
+                        bericht: $(".bericht").val()
+                    },
+                    cache: false,
+                    success: function(result){
+                        if(result == "Je bericht is verzonden! We komen zo spoedig mogelijk bij je terug!") {
+                            alert(result);
+                            window.location = "/Moedersmooiste/";
+                        }
+                        else {
+                            alert(result);
+                        }
+                    }
+                });
+            });
+        </script>
     </div>
 </section>
+<?php   
+}
+?>

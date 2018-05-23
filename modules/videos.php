@@ -13,34 +13,33 @@
             
             foreach ($links as $value) {
                 ?>
-                    <div class="item-video" data-merge="1.3"><a class="owl-video" href="<?= $value ?>"></a></div>
+                    <div class="item-video" data-merge="1.5"><a class="owl-video" href="<?= $value ?>"></a></div>
                 <?php
             }
         ?>
     </div>
 
-    <script type="text/javascript">
-      $(document).ready(function(){
-        $(".owl-carousel").owlCarousel({
-          center: true,
-          video:true,
-          loop:true,
-          margin:20,
-          lazyLoad:true,
-          merge:true,
-          responsiveClass:true,
-          responsive:{
-              0:{
-                  items:1,
-              },
-              600:{
-                  items:3,
-              },
-              1000:{
-                  items:5,
-              }
-            }
+    <script>
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel({
+                merge:true,
+                loop:true,
+                margin:10,
+                center:true,
+                video:true,
+                lazyLoad:true,
+                responsive:{
+                    0:{
+                        items:1,
+                    },
+                    600:{
+                        items:2,
+                    },
+                    1000:{
+                        items:3,
+                    }
+                }
+            });
         });
-      });
     </script>
 </section>
